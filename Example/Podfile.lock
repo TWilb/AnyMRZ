@@ -1,5 +1,5 @@
 PODS:
-  - AnyMRZ (0.5.0)
+  - AnyMRZ (0.5.1)
   - Nimble (8.0.2)
   - Quick (2.1.0)
 
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AnyMRZ: a8949ee469289d861557107256fa9baceb83d17e
+  AnyMRZ: 71ed4341170a3c7866a3c5f5a3253cfdcf903361
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
 
