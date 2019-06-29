@@ -8,35 +8,25 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AnyMRZ'
-  s.version          = '0.1.0'
+  s.version          = '0.5.0'
   s.summary          = 'A short description of AnyMRZ.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.requires_arc     = true
+  s.static_framework = true
+  s.swift_version    = '5.0'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  SFaceCompare is an simple libray for iOS to find and compare faces. SFaceCompare works on top of dlib and OpenCV libraries.
+  With usage of trained model.
+  DESC
 
   s.homepage         = 'https://github.com/Bohdan/AnyMRZ'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Bohdan' => 'nikoletti@macpaw.com' }
   s.source           = { :git => 'https://github.com/Bohdan/AnyMRZ.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '11.0'
   s.source_files = 'AnyMRZ/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'AnyMRZ' => ['AnyMRZ/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.preserve_paths = 'AnyMRZ/TesseractOCR.framework'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework TesseractOCR' }
+  s.vendored_frameworks = 'SFaceCompare/TesseractOCR.framework'
 end
